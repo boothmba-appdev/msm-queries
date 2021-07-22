@@ -1,4 +1,5 @@
-<h1>List of all directors:</h1>
+<h1>List of all actors</h1>
+
 <table border="1">
 
 <tr>
@@ -16,17 +17,17 @@
     </th>
     <th>
     </th>
-</tr>
+  </tr>
 
-  <% Director.all.each do |a_thing| %>
+  <% @list_of_actors.each do |a_thing| %>
     <tr>
       <td><%= a_thing.id %></td>
+      <td><%= a_thing.name %></td>
       <td>
         <img src ="<%= a_thing.image %>">
       </td>
-      <td><%= a_thing.name %></td>
       <td><%= a_thing.dob %></td>
-      <td><a href="/directors/<%=a_thing.id%>"> Show details</a> </td>
+      <td><a href="/actors/<%=a_thing.id%>"> Show details</a> </td>
     </tr>
   <% end %>
 
